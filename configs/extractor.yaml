@@ -1,0 +1,8 @@
+metadata_path: ../data/BinaryClassifierData/Segmented/Valid/Healthy/valid_healthy_seg.csv
+channel_number: null
+include_mirror_obj: false
+out_dir: ../data/BinaryClassifierData/Extracted/Valid/Healthy/
+out_metadata_path: ../data/BinaryClassifierData/Extracted/Valid/Healthy/valid_healthy_ext.csv
+img_ext: .tiff
+msk_ext: .png
+mir_ext: .tiff

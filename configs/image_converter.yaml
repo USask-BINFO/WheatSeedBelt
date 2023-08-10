@@ -1,0 +1,2 @@
+source_dir: source_dir/npy_images/
+destination_dir: destination_dir/converted_npy_images/
