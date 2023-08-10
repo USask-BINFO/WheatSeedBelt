@@ -4,7 +4,6 @@ non-conventional intensities to the same .npy format, but with standardized inte
 within the conventional [0, 255] range.
 """
 import glob
-import os
 from typing import List
 
 import numpy as np

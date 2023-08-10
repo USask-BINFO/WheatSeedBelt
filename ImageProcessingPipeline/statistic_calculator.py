@@ -29,7 +29,7 @@ def visualize(dates, red, green, blue, group_key, out_dir, prefix, stat_name):
 
 if __name__ == '__main__':
     extracted_info_path = 'data/batch1/op/colors.json'
-    out_dir = 'data/batch2/test_dir/'
+    out_dir = 'data_dir_address/'
     prefix = 'OP'
     with open(extracted_info_path, 'r') as fin:
         colors = json.load(fin)

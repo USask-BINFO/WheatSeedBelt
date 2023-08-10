@@ -1,0 +1,62 @@
+wandb: 
+  apply: false
+  project: project_name
+  entity: entity_name
+out_dir: out_dir
+experiment: experiment_name
+model: 
+    development_phase: train  # Options: `train`, `test`, `predict`
+    model_name: EFFICIENTNET_B0 
+    num_classes: 2
+    imagenet_pretrained: true 
+    pretrained: true 
+    pretrained_path: out_dir/EXP_NAME/EXP_NAME_best_model.pth
+phases:
+  - train
+  - valid
+  - test
+metadata_paths: 
+  train:
+      - train_dataset1.csv
+      - train_dataset2.csv
+  valid:
+      - valid_dataset1.csv
+      - valid_dataset2.csv
+  test:
+      - test_dataset1.csv
+      - test_dataset2.csv
+  predict: 
+      - predict_dataset1.csv
+      - predict_dataset2.csv
+root_dir: 
+  train: ./
+  valid: ./
+  test: ./
+  predict: ./
+use_sampler: false  # Use sampler for unbiased datasets. options: true, false
+transforms: transformations
+batch_size: 32 
+num_workers: 16
+num_epochs: 20 
+optimizer: 
+  name: Adam          # Optinos: SGD, Adam
+  lr: 0.001
+  momentum: 0.95
+  weight_decay: 0.0
+scheduler:
+  name: ExponentialLR  # Options: `ExponentialLR`, `StepLR`
+  gamma: 0.9
+  step_size: 5
+scoring: 
+    num_classes: 3
+    classes: ['FDK', 'UnHealthy', 'Healthy']
+    average: weighted 
+    sigmoid: false 
+    calculate_confusion_matrix: true
+    conf_out_name: confusion_matrix.png
+loss: 
+    task: multiclass # task_mode options: `binary`, `multiclass`
+prediction:
+  dir: out_dir/predictions/
+  pred_file_name: pred_datasets.csv
+  pred_file_name: pred_datasets.csv

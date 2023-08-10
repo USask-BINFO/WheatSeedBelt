@@ -5,7 +5,6 @@ Segment input images.
 import argparse
 import os
 
-import SimpleITK as sitk
 import numpy as np
 import pandas as pd
 from skimage import color, filters
@@ -47,7 +46,7 @@ if __name__ == '__main__':
         morphology.apply_rm_small_holes
     ])
 
-    os.makedirs(os.path.join(configs['out_dir'], 'images'), exist_ok=True)
+    os.makedirs(os.path.join(configs['out_dir'], '../images'), exist_ok=True)
     os.makedirs(os.path.join(configs['out_dir'], 'masks'), exist_ok=True)
 
     segmented_paths = {
@@ -70,8 +69,8 @@ if __name__ == '__main__':
             utils.masked_image_visualizer(image, mask)
         
         seg_img_pth = os.path.join(
-                configs['out_dir'], 
-                'images',
+                configs['out_dir'],
+            '../images',
                 f"{configs['name_prefix']}-{i:0>6}{configs['img_ext']}"
         )
         seg_msk_pth = os.path.join(

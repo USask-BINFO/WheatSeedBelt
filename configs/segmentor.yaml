@@ -1,6 +1,6 @@
-metadata_path: ../data/Original/valid_healthy.csv
-out_dir: ../data/BinaryClassifierData/Segmented/Valid/Healthy/
-segmented_metadata_path: ../data/BinaryClassifierData/Segmented/Valid/Healthy/valid_healthy_seg.csv
+metadata_path: ../data/.../data.csv
+out_dir: ../data/.../Segmented/
+segmented_metadata_path: ../data/.../Segmented/segmented_data_seg.csv
 name_prefix: binhealvalid   # Do not use any hyphen `-` in the prefix. 
 img_ext: .tiff
 msk_ext: .png

@@ -27,7 +27,7 @@ if __name__ == '__main__':
         include_mirror_obj=configs['include_mirror_obj']
     )
     print('Extracting Regions of Interests...')
-    os.makedirs(os.path.join(configs['out_dir'], 'RoIs', 'images'), exist_ok=True)
+    os.makedirs(os.path.join(configs['out_dir'], 'RoIs', '../images'), exist_ok=True)
     os.makedirs(os.path.join(configs['out_dir'], 'RoIs', 'masks'), exist_ok=True)
     if configs['include_mirror_obj'] == True: 
         os.makedirs(os.path.join(configs['out_dir'], 'RoIs', 'mirrors'), exist_ok=True)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
         extnsion_len = len(os.path.basename(meta['Image']).split('.')[-1]) 
         sample['Image'] = os.path.join(
             configs['out_dir'], 
-            'RoIs', 'images', 
+            'RoIs', '../images',
             f"{os.path.basename(meta['Image'])[:-(extnsion_len+1)]}{configs['img_ext']}"
         )
         # The format of the `roi_regions`` list: `mirror object`, `image`, `mask`
