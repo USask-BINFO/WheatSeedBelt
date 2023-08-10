@@ -1,6 +1,7 @@
 # WheatSeedBelt
-- - - 
 
+### Image Processing Pipeline
+- - - 
 This repository contains an image processing pipeline designed for the manipulation and analysis of images from the WheatSeedBelt Dataset. These images are associated with the research paper titled `Detection of Fusarium Damaged Kernel in Wheat Using Deep Semi-Supervised Learning on a Novel WheatSeedBelt Dataset.`
 
 To extract the RoIs (Regions of Interest) from the original .npy images, you might need to run the following commands: 
