@@ -39,3 +39,13 @@ An overview of the pre-processing pipeline developed for wheat kernel images.
 First, we use a center crop to remove boundary noise or artifacts that may adversely affect segmentation accuracy. This is followed by color
 conversion, segmentation, mask cleaning, then the extraction of regions of 
 interest and relevant texture-level features recorded as feature vectors.
+
+- - - 
+Deep CNN pipeline for classification of wheat kernels into two or three classes:
+```bash
+python3 experiment.py --config configs/experiment.yaml
+```
+Simply change the `config` file to point to the correct model, config files, paths, and directories for training the model. 
+The correct model names are listed as:
+- `EFFICIENTNET_B0` to `EFFICIENTNET_B5`
+- `RESNET18` to `RESNET101`
